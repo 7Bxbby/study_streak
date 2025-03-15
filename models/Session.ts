@@ -4,7 +4,6 @@ const SessionSchema: Schema = new Schema(
     {
     subject: Number,
     duration: Number,
-    date: String,
     technique: String,
     },
     {
