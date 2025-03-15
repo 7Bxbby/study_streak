@@ -13,5 +13,5 @@ export async function PUT(request: Request, {params} : Params) {
     const {newTotalHours: totalHours} = await request.json()
     await connectMongoDB()
     await Subject.findByIdAndUpdate(id, {totalHours})
-    return NextResponse.json({message: "Successfully updated subject total hours"}, {status: 201});
+    return NextResponse.json({message: "Successfully updated subject's total hours"}, {status: 201});
 }
