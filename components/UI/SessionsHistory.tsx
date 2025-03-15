@@ -7,8 +7,8 @@ interface SessionsHistoryProps {
 
 const SessionsHistory = ({ history }: SessionsHistoryProps) => (
 <div
-    className="grow bg-gray-800 rounded-lg shadow-lg border border-gray-700 hover:border-gray-600 transition-all duration-200">
-    <div className="p-6">
+    className="flex grow bg-gray-800 rounded-lg shadow-lg border border-gray-700 hover:border-gray-600 transition-all duration-200 justify-center items-center">
+    <div className="p-6 grow">
         <h2 className="text-xl font-bold text-gray-100 mb-4 flex items-center">
             <BarChart2 size={22} className="mr-2 text-purple-400"/>
             Recent Sessions
@@ -32,7 +32,7 @@ const SessionsHistory = ({ history }: SessionsHistoryProps) => (
                 </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-700">
-                {history.slice(-9).reverse().map((session) => (
+                {history.slice(-6).reverse().map((session) => (
                     <tr key={session.id} className="bg-gray-800 hover:bg-gray-700 transition-colors duration-150">
                         <td className="px-4 py-3 whitespace-nowrap text-sm font-medium text-gray-100">{session.subject}</td>
                         <td className="px-4 py-3 whitespace-nowrap text-sm text-gray-300">{session.duration} min</td>
