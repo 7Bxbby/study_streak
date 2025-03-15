@@ -140,7 +140,7 @@ export default function Dashboard() {
   const showNotification = (message: string, type: 'success' | 'error' | 'info' | 'warning') => {
     setNotification({ show: true, message, type });
     setTimeout(() => {
-      setNotification({ show: false, message: '', type: 'info' }); // Default type when hiding
+      setNotification({ show: false, message: notification.message, type: notification.type }); // Default type when hiding
     }, 3000);
   };
 
@@ -200,9 +200,9 @@ export default function Dashboard() {
         {/* Header */}
         <Header level={mockData.user.level} streak={mockData.user.streak} name={mockData.user.name}/>
         {/* Notification Toast */}
-        {notification.show && (
-            <Toast type={notification.type} message={notification.message}/>
-        )}
+
+        <Toast notification={notification}/>
+
         <main className="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* Left Column - Session Control */}
