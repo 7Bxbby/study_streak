@@ -27,10 +27,10 @@ const TimerSettings = ({
         >
             <Clock size={16} className="mr-2" />
             Time Settings
-            {showTimeSettings ? <ChevronUp size={16} className="ml-2" /> : <ChevronDown size={16} className="ml-2" />}
+            {showTimeSettings && !activeSession ? <ChevronUp size={16} className="ml-2" /> : <ChevronDown size={16} className="ml-2" />}
         </button>
 
-        {showTimeSettings && (
+        {showTimeSettings && !activeSession &&(
             <div className="bg-gray-700 p-5 rounded-md grid grid-cols-2 gap-4 animate-fadeIn shadow-inner">
                 <div>
                     <label className="block text-sm font-semibold text-gray-300 mb-2">Session Length</label>
