@@ -21,8 +21,9 @@ const TimerSettings = ({
                       }: TimerSettingsProps) => (
     <div className="mb-6">
         <button
+            disabled={activeSession}
             onClick={() => setShowTimeSettings(!showTimeSettings)}
-            className="flex items-center mb-2 text-sm font-medium text-gray-300 hover:text-gray-100 transition-colors duration-200 bg-gray-700 px-3 py-2 rounded-md hover:bg-gray-600"
+            className={`disabled:bg-gray-900 disabled:text-gray-300 flex items-center mb-2 text-sm font-medium text-gray-300 transition-colors duration-200 bg-gray-700 px-3 py-2 rounded-md ${!activeSession ? 'hover:text-gray-100 hover:bg-gray-600' : ''}`}
         >
             <Clock size={16} className="mr-2" />
             Time Settings

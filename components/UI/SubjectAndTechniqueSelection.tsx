@@ -22,7 +22,7 @@ const SubjectAndTechniqueSelection = ({
         <div>
             <label className="block text-sm font-semibold text-gray-300 mb-2">Subject</label>
             <select
-                className="block w-full rounded-md border-gray-600 bg-gray-700 text-gray-200 shadow-sm focus:border-green-500 focus:ring-green-500 py-2"
+                className="p-2 disabled:bg-gray-900 disabled:text-gray-300 block w-full rounded-md border-gray-600 bg-gray-700 text-gray-200 shadow-sm focus:border-green-500 focus:ring-green-500"
                 value={selectedSubject.id}
                 onChange={(e) => setSelectedSubject(subjects.find(s => s.id === parseInt(e.target.value)) ?? { id: 0, name: '', color: '',totalHours: 0 })}
                 disabled={activeSession}
@@ -37,7 +37,7 @@ const SubjectAndTechniqueSelection = ({
         <div>
             <label className="block text-sm font-semibold text-gray-300 mb-2">Technique</label>
             <select
-                className="block w-full rounded-md border-gray-600 bg-gray-700 text-gray-200 shadow-sm focus:border-green-500 focus:ring-green-500 py-2"
+                className="p-2 disabled:bg-gray-900 disabled:text-gray-300 block w-full rounded-md border-gray-600 bg-gray-700 text-gray-200 shadow-sm focus:border-green-500 focus:ring-green-500"
                 value={selectedTechnique.id}
                 onChange={(e) =>
                     setSelectedTechnique(techniques.find(t => t.id === parseInt(e.target.value)) ?? { id: 0, name: '', description: '' })
