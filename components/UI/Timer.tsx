@@ -4,13 +4,12 @@ interface TimerProps {
     timerSeconds: number;
     formatTime: (minutes: number, seconds: number) => string;
     timerPulse: boolean;
-    selectedTechnique: string;
     breakMinutes: number;
     sessionMinutes: number;
     activeSession: boolean;
 }
 
-export default function Timer ({ isBreak,activeSession, timerMinutes, timerSeconds, formatTime, timerPulse, selectedTechnique, breakMinutes, sessionMinutes }: TimerProps){
+export default function Timer ({ isBreak,activeSession, timerMinutes, timerSeconds, formatTime, timerPulse, breakMinutes, sessionMinutes }: TimerProps){
     return (
         <div className="text-center mb-8">
             {/* Circular Progress Timer */}
@@ -56,8 +55,8 @@ export default function Timer ({ isBreak,activeSession, timerMinutes, timerSecon
             {/* Mode Description */}
             <p className="text-sm font-medium text-gray-400 mt-4">
                 {isBreak
-                    ? "Take a break and recharge"
-                    : selectedTechnique}
+                    ? "Take a break and recharge!"
+                    : "Keep your focus while studying!"}
             </p>
         </div>
 )

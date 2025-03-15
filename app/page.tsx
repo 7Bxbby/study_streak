@@ -211,7 +211,7 @@ export default function Dashboard() {
               <div className="bg-gray-800 rounded-lg shadow-lg overflow-hidden border border-gray-700 hover:border-gray-600 transition-all duration-200">
                 <div className="p-6">
                   <h2 className="text-xl font-bold text-gray-100 mb-4 flex items-center">
-                    {isBreak ? (
+                    {isBreak && activeSession ? (
                         <>
                           <AlarmClock size={22} className="mr-2 text-blue-400"/>
                           Break Time
@@ -254,7 +254,6 @@ export default function Dashboard() {
                       timerPulse={timerPulse}
                       breakMinutes={breakMinutes}
                       sessionMinutes={sessionMinutes}
-                      selectedTechnique={selectedTechnique.description}
                   />
                   {/* Session Controls */}
                   <SessionControls toggleSession={toggleSession} isBreak={isBreak} activeSession={activeSession} />
