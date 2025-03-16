@@ -22,7 +22,7 @@ const mockData = {
     defaultGoal: 4
   },
   todayStats: [
-      {date: '2025-03-14', completed: 3, goal: 6, focusScore: 55, morningHours: 3, eveningHours: 0},
+      {date: '2025-03-16', completed: 3, goal: 6, focusScore: 55, morningHours: 3, eveningHours: 0},
     {date: '2025-12-12', completed: 2.5, goal: 4, focusScore: 85, morningHours: 1.5, eveningHours: 1.0},
     {date: '2025-03-12', completed: 2.5, goal: 4, focusScore: 85, morningHours: 1.5, eveningHours: 1.0},
   ],
@@ -261,7 +261,7 @@ export default function Dashboard() {
               </div>
 
               {/* Sessions History */}
-              <SessionsHistory/>
+              <SessionsHistory sessions={mockData.sessionsHistory}/>
             </div>
 
             {/* Right Column - Stats & Plant */}
