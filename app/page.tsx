@@ -261,7 +261,7 @@ export default function Dashboard() {
               </div>
 
               {/* Sessions History */}
-              <SessionsHistory isFullHistory={false} history={mockData.sessionsHistory} />
+              <SessionsHistory/>
             </div>
 
             {/* Right Column - Stats & Plant */}
